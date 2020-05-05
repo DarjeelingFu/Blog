@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>example</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/example.css">
+	</head>
+	<body>
+		<div id="navBox">
+			<div id="navContent">
+				<div id="logo"></div>
+				<ul id="navMenu">
+					<li><a href="example.html" class="navLi">PL</a></li>
+					<li><a href="new_file.json" class="navLi">js</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="title">
+			<p>Personal Lib</p>
+		</div>
+		<div id="contents">
+			<div class="list" onclick="refreshState('s0')"><a class="essay" href="js/vue.js">See source codes of vue.js</a></div>
+			<div class="list" onclick="refreshState('s1')"><a class="essay" href="js/vue.min.js">See source codes of vue.min.js</a></div>
+			<div class="list" onclick="refreshState('s2')">
+				<a class="essay" href="img/hololive.png">Hololive 2020.1.24 liveshow post</a>
+			</div>
+			<div id="col">
+				<div class="list" id="s0"></div>
+				<div class="list" id="s1"></div>
+				<div class="list" id="s2"></div>
+			</div>
+		</div>
+		<script>
+			function refreshState(str){
+				document.getElementById(str).innerHTML = 'read';
+				document.getElementById(str).style.color = "red";
+			}
+		</script>
+	</body>
+</html>
