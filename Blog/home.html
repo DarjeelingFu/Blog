@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>REALM inthe Shell</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<script src="js/home.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="nav" class="smBox">
+				<div id="navContent">
+					<div id="logo"> </div>
+					<div id="navList">
+						<ul id="menuLi">
+							<li class="navItem">主站</li>
+							<li class="navItem">Realms</li>
+							<li class="navItem">PersonalLib</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="content">
+				<div id="left" class="smBox">
+					<arti></arti>
+				</div>
+				<div id="right" class="smBox">
+					right
+				</div>
+			</div>
+		</div>
+		<script>
+			Vue.component('arti', {
+				template: '<h1>Hello</h1>'
+			});
+			var vue = new Vue({
+				el: '#content'
+			});
+		</script>
+	</body>
+</html>
