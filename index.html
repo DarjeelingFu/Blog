@@ -37,7 +37,8 @@
 									</div>
 								</form>
 								<div id="btnBox">
-									<button class="smBox">Login</button>
+									<button id="reg" class="smBox">Register</button>
+									<button id="log" class="smBox">Login</button>
 								</div>
 								<div id="erInfo" class="smBox">
 									<section>Function uncomplished;-)</section>
@@ -120,11 +121,18 @@
 						</div>
 						
 					</article>
+					<!-- <essay titl0="123" href0="index.html" src0="" detail0="123" time0="123" tag0="123"></essay> -->
+					<essayitem :info="info" id="ess"></essayitem>
 					<div id="bottom"></div>
 				</div>
 				<div id="rightBox" class="contentBox">
 					<div id="right">
-						
+						<div class="statistics" id="essayNum">
+							123
+						</div>
+						<div  class="statistics" >
+							123
+						</div>
 					</div>
 				</div>
 			</div>
@@ -132,5 +140,23 @@
 				<img src="img/DG.png" width="400px"/>
 			</div>
 		</div>
+		<script src="js/index_vue.js"></script>
+		<script>
+			//title href src detail time tag
+			var essay1 = {
+				title: 'test title',
+				href: 'index.html',
+				src: 'img/cover2.jpg',
+				detail: 'i am different because i was made by compoments~',
+				time: '2020.5.8',
+				tag: 'game,cluture',
+			}
+			var vue = new Vue({
+				el: '#left',
+				data: {
+					info: essay1
+				}
+			});
+		</script>
 	</body>
 </html>
