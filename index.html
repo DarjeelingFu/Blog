@@ -68,7 +68,7 @@
 				</div>
 			</div>
 			<div id="deskGirl">
-				<img src="img/DG.png" width="400px"/>
+				<img :src="src" width="400px"/>
 			</div>
 		</div>
 		<script src="js/index_vue.js"></script>
@@ -77,7 +77,7 @@
 			var meta = {
 				title: 'meta',
 				href: 'article/meta.html',
-				src: 'img/cover2.jpg',
+				src: 'https://img.mmy.moe/images/2018/06/09/68500051_p004de7d0292edbec7.md.png',
 				detail: 'this is the first essay uploaded on the website, mainly for test',
 				time: '2020.5.9',
 				tag: 'test',
@@ -85,7 +85,7 @@
 			var essay1 = {
 				title: '巧合的动画情景作用',
 				href: 'article/01.html',
-				src: 'img/cover1.png',
+				src: 'https://img.mmy.moe/images/2016/05/10/loli---78938d67.md.png',
 				detail: '动画与其他真人参演的影视作品的一个不同之处是动画不受拍摄条件的限 制，因而其情节显得更加不拘一格，天马行空，而多设巧合不失为一种具 体的表现。巧合用的巧，往往能带来意想不到的效果。',
 				time: '2019.6.10',
 				tag: '动画',				
@@ -93,7 +93,7 @@
 			var essay2 = {
 				title: '我们是否拥有自由的意志',
 				href: 'article/02.html',
-				src: 'img/cover4.png',
+				src: 'https://img.mmy.moe/images/2016/05/10/loli---7510e40f.md.png',
 				detail: '绝对的自由存在吗？如果说自由是相对的，那么相比较的上限存在吗？人类的不断发展会使意志绝对自由的一天来临吗？物理学家们曾希望找到甚至支配人类活动规律的定律，进而加以控制，而新晋科学又将这种可能性一票否决，同时认识论又为人类认知提供了几乎无限拓展的空间。',
 				time: '2020.5.9',
 				tag: '肥佬塞飞',				
@@ -104,6 +104,13 @@
 					essays: [meta, essay2, essay1],				
 				}
 			});
+			var deskGirl = new Vue({
+				el: '#deskGirl',
+				data: {
+					src: 'img/DG.png',
+					
+				}
+			})
 		</script>
 	</body>
 </html>
