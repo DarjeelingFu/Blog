@@ -17,20 +17,20 @@
 					</div>
 					<div id="navLink">
 						<ul>
-							<li>留言板</li>
+							<!--<li>留言板</li>-->
 							<li id="LOG">Login In</li>
 						</ul>
 						<div id="logBox" class="smBox">
 							<div id="login">
 								<form>
 									<div class="textBox">
-										<span><b>User name</b></span>
+										<span>User name</span>
 										<div class="textFiled">
 											<input type="text" />
 										</div>
 									</div>
 									<div class="textBox">
-										<span><b>Password</b></span>
+										<span>Password</span>
 										<div class="textFiled">
 											<input type="password" />
 										</div>
@@ -50,88 +50,19 @@
 			</div>
 			<div id="container">
 				<div id="left" class="contentBox">
-					<article class="article">
-						<div class="title">
-							<p><a href="index.html">文化映射宇称守恒吗</a></p>
-						</div>
-						<div class="info">
-							<div class="cover">
-								<img src="img/cover1.png"/>
-							</div>
-							<div class="detail">
-								<p>
-									译作的译作，与原作差多少？有可能完全一致吗？文化的映射绝非简单的否定之否定，
-									或者映射是不可逆的类熵增行为，抑或衡量“差异”的标准自始就不存在。
-								</p>
-							</div>							
-							<div class="state">
-								<ul class="states">
-									<li class="time">2020年5月5日</li>
-									<li class="tag">Minecraft</li>
-								</ul>
-							</div>
-						</div>
-
-					</article>
-					<article class="article">
-						<div class="title">
-							<p><a href="index.html">字体样式测试</a></p>
-						</div>
-						<div class="info">
-							<div class="cover">
-								<img src="img/cover3.jpg"/>
-							</div>
-							<div class="detail">
-								<p>
-									字体样式测试。わびわび、わびばぼ。
-								</p>
-							</div>							
-							<div class="state">
-								<ul class="states">
-									<li class="time">2020年5月5日</li>
-									<li class="tag">Minecraft</li>
-								</ul>
-							</div>
-						</div>
-
-					</article>
-					<article class="article">
-						<div class="title">
-							<p><a href="index.html">Minecraft efficient resourcing method</a></p>
-						</div>
-						<div class="info">
-							<div class="cover">
-								<img src="img/cover4.png"/>
-							</div>
-							<div class="detail">
-								<p>
-									For a long time I was borded of the annoying resoucing 
-									work and it prooves that I am not alone.<br>
-									After a discussion with my friends by chance, with surprise 
-									I found that nearly every one has his/her own unique <!-- methods of 
-									attaining the resources such as normal dropouts of hostile creatures -->
-								</p>
-							</div>							
-							<div class="state">
-								<ul class="states">
-									<li class="time">2020年5月5日</li>
-									<li class="tag">Minecraft</li>
-								</ul>
-							</div>
-						</div>
-						
-					</article>
 					<!-- <essay titl0="123" href0="index.html" src0="" detail0="123" time0="123" tag0="123"></essay> -->
-					<essayitem :info="info" id="ess"></essayitem>
+					
+					<essayitem v-for="item in essays" :info="item"></essayitem>
+					
 					<div id="bottom"></div>
 				</div>
 				<div id="rightBox" class="contentBox">
 					<div id="right">
 						<div class="statistics" id="essayNum">
-							123
+							
 						</div>
 						<div  class="statistics" >
-							123
+							
 						</div>
 					</div>
 				</div>
@@ -143,18 +74,34 @@
 		<script src="js/index_vue.js"></script>
 		<script>
 			//title href src detail time tag
-			var essay1 = {
-				title: 'test title',
-				href: 'index.html',
+			var meta = {
+				title: 'meta',
+				href: 'article/meta.html',
 				src: 'img/cover2.jpg',
-				detail: 'i am different because i was made by compoments~',
-				time: '2020.5.8',
-				tag: 'game,cluture',
+				detail: 'this is the first essay uploaded on the website, mainly for test',
+				time: '2020.5.9',
+				tag: 'test',
+			}
+			var essay1 = {
+				title: '巧合的动画情景作用',
+				href: 'article/01.html',
+				src: 'img/cover1.png',
+				detail: '动画与其他真人参演的影视作品的一个不同之处是动画不受拍摄条件的限 制，因而其情节显得更加不拘一格，天马行空，而多设巧合不失为一种具 体的表现。巧合用的巧，往往能带来意想不到的效果。',
+				time: '2019.6.10',
+				tag: '动画',				
+			}
+			var essay2 = {
+				title: '我们是否拥有自由的意志',
+				href: 'article/02.html',
+				src: 'img/cover4.png',
+				detail: '绝对的自由存在吗？如果说自由是相对的，那么相比较的上限存在吗？人类的不断发展会使意志绝对自由的一天来临吗？物理学家们曾希望找到甚至支配人类活动规律的定律，进而加以控制，而新晋科学又将这种可能性一票否决，同时认识论又为人类认知提供了几乎无限拓展的空间。',
+				time: '2020.5.9',
+				tag: '肥佬塞飞',				
 			}
 			var vue = new Vue({
 				el: '#left',
 				data: {
-					info: essay1
+					essays: [meta, essay2, essay1],				
 				}
 			});
 		</script>
